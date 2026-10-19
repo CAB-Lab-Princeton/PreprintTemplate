@@ -1,0 +1,26 @@
+\section{Method}
+\label{sec:method}
+
+Keep paper-specific notation in \texttt{main.tex}. Displayed equations are numbered and can be referenced with \verb|\cref|, as in \cref{eq:equivariance}:
+\begin{equation}
+  f(\rho_{\mathrm{in}}(g)\,x) = \rho_{\mathrm{out}}(g)\,f(x), \qquad \forall g \in G.
+  \label{eq:equivariance}
+\end{equation}
+
+\newtheorem{theorem}{Theorem}
+\begin{theorem}\label{thm:main}
+Every layer of \method commutes with the action of $\mathrm{E}(3)$, hence so does the composed network.
+\end{theorem}
+
+\begin{algorithm}[t]
+  \caption{Training loop of \method}\label{alg:train}
+  \begin{algorithmic}[1]
+    \Require dataset $\mathcal{D}$, learning rate $\eta$
+    \For{each minibatch $(x, y) \in \mathcal{D}$}
+      \State $\hat{y} \gets f_\theta(x)$
+      \State $\theta \gets \theta - \eta\,\nabla_\theta \ell(\hat{y}, y)$
+    \EndFor
+  \end{algorithmic}
+\end{algorithm}
+
+\paragraph{Implementation} Run-in paragraph headings use \verb|\paragraph| or \verb|\parahead|. \Cref{alg:train} shows the algorithm environment.

@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.pdf
+!assets/*.pdf
+!figures/*.pdf
+!docs/*.pdf
+arxiv/
+arxiv.tar.gz

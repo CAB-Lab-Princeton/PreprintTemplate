@@ -1,0 +1,54 @@
+% =============================================================================
+%  CAB Lab preprint template -- example paper
+%  Build:  latexmk -pdf main.tex      (or: make)
+%  arXiv:  make arxiv                 (produces arxiv.tar.gz with the .bbl)
+% =============================================================================
+% Class options: 10pt|11pt|12pt, twocolumn, toc, tocpage, nonatbib, nologo,
+%                noheader, draft
+\documentclass{cablab}
+
+% ---- Paper-specific packages and macros go here, not in the class ----------
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\newcommand{\method}{\textsc{GeoNet}\xspace}
+
+% ---- Title block -------------------------------------------------------------
+\title{A Concise Title for Your Preprint:\\Optional Subtitle Describing the Contribution}
+\shorttitle{A Concise Title for Your Preprint}
+
+\author[1,*]{First Author}
+\author[1,*]{Second Author}
+\author[2]{Third Author}
+\author[1,\dagger]{Christine Allen-Blanchette}
+
+\affiliation[1]{Princeton University}
+\affiliation[2]{Another Institution}
+\contribution[*]{Equal contribution}
+\contribution[\dagger]{Corresponding author}
+
+\input{sec/0-abstract}
+\keywords{geometric deep learning, equivariance, AI for science, robotics}
+
+\date{\today}
+\code{https://github.com/CAB-Lab-Princeton/your-project}
+\project{https://cab-lab-princeton.github.io/your-project}
+\correspondence{\email{netid@princeton.edu}}
+
+\begin{document}
+\maketitle
+
+\input{sec/1-intro}
+\input{sec/2-method}
+\input{sec/3-experiments}
+\input{sec/4-conclusion}
+
+\section*{Acknowledgments}
+Thank the people and funding agencies that supported this work.
+
+\bibliographystyle{unsrtnat}
+\bibliography{main}
+
+\beginappendix
+\input{sec/5-appendix}
+
+\end{document}

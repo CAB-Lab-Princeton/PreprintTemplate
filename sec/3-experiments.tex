@@ -1,0 +1,23 @@
+\section{Experiments}
+\label{sec:experiments}
+
+Tables use \texttt{booktabs}; the helper \verb|\tablestyle{<colsep>}{<stretch>}| sets compact spacing. Captions of tables sit above the table (\cref{tab:main}).
+
+\begin{table}[t]
+  \caption{\textbf{Main results.} Mean $\pm$ std over five seeds; best in bold.}
+  \label{tab:main}
+  \tablestyle{6pt}{1.15}
+  \begin{tabular}{@{}lcccc@{}}
+    \toprule
+    Method & Equivariant & Params & Error ($\downarrow$) & Time (s) \\
+    \midrule
+    MLP              & \xmark & 1.2M & $0.412 \pm 0.010$ & 0.8 \\
+    Transformer      & \xmark & 3.4M & $0.231 \pm 0.008$ & 2.1 \\
+    EGNN             & \cmark & 0.9M & $0.118 \pm 0.004$ & 1.3 \\
+    \rowcolor{cabOrange!8}
+    \method (ours)   & \cmark & 0.8M & $\mathbf{0.087 \pm 0.003}$ & 1.1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Discuss what the numbers show, then add ablations and failure cases.
