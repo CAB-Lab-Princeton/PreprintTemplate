@@ -99,6 +99,8 @@ Fine-tuning goes in the preamble:
 \tocnumwidths{2.4em}{3.2em}         % widen number boxes, e.g. for Roman numerals
 ```
 
+arXiv's file scanner cannot follow `\lablogo`, so its Review Files step marks a logo chosen that way as unused and ticks it for removal. Untick it there, or keep the default name and replace `assets/cablab-logo.png` with your logo, which arXiv detects.
+
 You can also leave both options off and put `\tableofcontents` wherever you want it. It uses the same styling. References get a contents entry automatically.
 
 ## Writing helpers

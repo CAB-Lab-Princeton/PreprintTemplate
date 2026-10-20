@@ -282,7 +282,13 @@
 \let\abstract\relax\let\endabstract\relax
 \NewEnviron{abstract}{\global\let\cab@abstract\BODY}
 \newcommand\keywords[1]{\gdef\cab@keywords{#1}}
-\newcommand\lablogo[1]{\renewcommand\cab@logo{#1}}
+% arXiv's file scanner reads \includegraphics arguments literally: the default
+% path is spelled out so the logo counts as used, and a \lablogo override goes
+% through an alias so its #1 is not flagged.
+\newcommand\cab@logoimage{\includegraphics[width=\cab@logowidth]{assets/cablab-logo}}
+\newcommand\cab@graphic{\includegraphics}
+\newcommand\lablogo[1]{\renewcommand\cab@logo{#1}%
+  \renewcommand\cab@logoimage{\cab@graphic[width=\cab@logowidth]{#1}}}
 
 \newcommand\metadata[2][]{%
   \gappto\cab@meta{\cab@metaitem{#1}{#2}}}
@@ -342,12 +348,10 @@
     \end{minipage}%
     \ifcab@logo\hfill\rule{0pt}{0.26\cab@logowidth}\fi\par
   \end{tcolorbox}}
-% alias so arXiv's static file scanner does not read \cab@logo as a filename
-\newcommand\cab@graphic{\includegraphics}
 \newcommand\cab@placelogo{%
   \node[anchor=south east,inner sep=0pt] at
     ([xshift=-0.65cm,yshift=0.5cm]frame.south east)
-    {\cab@graphic[width=\cab@logowidth]{\cab@logo}};}
+    {\cab@logoimage};}
 \newcommand\justifying@cab{\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil\relax}
 
 \pdfstringdefDisableCommands{\def\\{ }}
