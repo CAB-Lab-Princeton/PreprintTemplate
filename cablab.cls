@@ -342,10 +342,12 @@
     \end{minipage}%
     \ifcab@logo\hfill\rule{0pt}{0.26\cab@logowidth}\fi\par
   \end{tcolorbox}}
+% alias so arXiv's static file scanner does not read \cab@logo as a filename
+\newcommand\cab@graphic{\includegraphics}
 \newcommand\cab@placelogo{%
   \node[anchor=south east,inner sep=0pt] at
     ([xshift=-0.65cm,yshift=0.5cm]frame.south east)
-    {\includegraphics[width=\cab@logowidth]{\cab@logo}};}
+    {\cab@graphic[width=\cab@logowidth]{\cab@logo}};}
 \newcommand\justifying@cab{\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil\relax}
 
 \pdfstringdefDisableCommands{\def\\{ }}
