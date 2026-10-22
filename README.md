@@ -126,9 +126,9 @@ Typography: XCharter for text, newtxmath (Charter) for maths, Source Sans Pro fo
 | `assets/cablab-logo.png` | full lockup (default in the title panel) |
 | `assets/cablab-logo-dark.png` | lockup for dark backgrounds |
 | `assets/cablab-mark.png`, `cablab-mark-dark.png` | "CAB" monogram only |
-| `assets/cablab-icon.png` | square icon: the monogram on a rounded tile (avatars, favicons) |
+| `assets/cablab-icon.png` | square app icon (avatars, favicons) |
 
-The letters C-A-B are drawn as a taxi cab, and each one stands for a research theme. The **C** is the hood, a rotation arrow (symmetry, equivariance, geometric deep learning). The **A** is the front cabin, a linkage of graph nodes (graph networks, robot kinematics). The **B** is the rear cabin and trunk, with an orbit inside (physics, AI for science). A taxi roof-light sits on top.
+In the logo, the **C** is a rotation arrow (symmetry and rotors) and the **A** is a graph or linkage (GNNs and robot kinematics). A small taxi roof-light sits on the **B**: it is a cab.
 
 ## Converting an existing paper
 

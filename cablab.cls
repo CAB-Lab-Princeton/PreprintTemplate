@@ -346,7 +346,7 @@
       \small\raggedright\setstretch{1.25}%
       \ifdefempty\cab@meta{\strut}{\cab@meta}\par
     \end{minipage}%
-    \ifcab@logo\hfill\rule{0pt}{0.26\cab@logowidth}\fi\par
+    \ifcab@logo\hfill\rule{0pt}{0.23\cab@logowidth}\fi\par
   \end{tcolorbox}}
 \newcommand\cab@placelogo{%
   \node[anchor=south east,inner sep=0pt] at
